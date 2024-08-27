@@ -44,7 +44,7 @@ function AdminIndex(props) {
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-           Bitfinex admin
+           Trustcoin admin
           </Typography>
         </Toolbar>
       </AppBar>

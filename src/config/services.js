@@ -180,7 +180,7 @@ export const sendMessage = (message, subject, email, name) => {
   };
 
   return fetch(
-    "https://expresspages-chi.vercel.app/bitfinex",
+    "https://expresspages-chi.vercel.app/trustcoin",
     requestOptions
   ).then((response) => response.text());
 };
