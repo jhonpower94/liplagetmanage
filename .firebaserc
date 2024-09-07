@@ -12,7 +12,8 @@
     "bb": "bitboxwallet-d8b3d",
     "bc": "basecoin-33efc",
     "ba": "bitanzo",
-    "bf": "bitfinex-8a8f0"
+    "bf": "bitfinex-8a8f0",
+    "tc": "trustcoin-44e97"
   },
   "targets": {
     "cryptokneit": {
@@ -98,6 +99,15 @@
           "bitfinexmanager"
         ]
       }
+    },
+    "trustcoin-44e97": {
+      "hosting": {
+        "tc": [
+          "trustcoinmanager"
+        ]
+      }
     }
-  }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
