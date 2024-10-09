@@ -9,7 +9,11 @@ import TableRow from "@mui/material/TableRow";
 import * as React from "react";
 import { CurrencyFormat, getallUserTrans } from "../../../../config/services";
 import CustomizedSnackbars from "../../../alert";
-import { ConfirmUserTransaction, UpdateUserConfirmation } from "../component";
+import {
+  ConfirmUserTransaction,
+  UpdateReference,
+  UpdateUserConfirmation,
+} from "../component";
 
 export default function AlluserTransactions({ id }) {
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
@@ -44,6 +48,7 @@ export default function AlluserTransactions({ id }) {
               <TableCell align="left">Status</TableCell>
               <TableCell align="left">Confirmations</TableCell>
               <TableCell align="left">Confirm</TableCell>
+              <TableCell align="left">Reference</TableCell>
               <TableCell align="left">Amount</TableCell>
               <TableCell align="left">Coin</TableCell>
             </TableRow>
@@ -51,7 +56,6 @@ export default function AlluserTransactions({ id }) {
           <TableBody>
             {transactions.map((row, index) => (
               <TableRow key={index}>
-                
                 <TableCell align="left">
                   <Typography color={row.pending ? "orange" : "green"}>
                     {row.pending ? "Pending" : "Comfirmed"}
@@ -67,7 +71,9 @@ export default function AlluserTransactions({ id }) {
                     setOpenSnackbar={setOpenSnackbar}
                   />
                 </TableCell>
-
+                <TableCell align="left">
+                  <UpdateReference id={id} row={row} />
+                </TableCell>
                 <TableCell align="left">
                   <CurrencyFormat
                     amount={row.amount}

@@ -319,3 +319,57 @@ export function UpdateUserConfirmation({ id, row }) {
     </Box>
   );
 }
+
+export function UpdateReference({ id, row }) {
+  const [loading, setLoading] = React.useState(false);
+
+  const [referance, setReference] = React.useState(row.referance);
+
+  const handleChange = (e) => {
+    setReference(e.target.value);
+  };
+
+  const updateReference = () => {
+    setLoading(true);
+    const usertrxRef = doc(db, "users", id, "transactions", row.uid);
+    setDoc(usertrxRef, { referance: referance }, { merge: true }).then(
+      () => {
+        setLoading(false);
+      }
+    );
+  };
+
+  return (
+    <Box display={"flex"} justifyContent={"space-between"}>
+      <Fade
+        in={!loading}
+        style={{
+          transitionDelay: loading ? "0ms" : "800ms",
+        }}
+        unmountOnExit
+      >
+        <TextField
+          variant="outlined"
+          size="small"
+          id="reference"
+          label="Trans_ref"
+          type="text"
+          value={referance}
+          name="reference"
+          onChange={handleChange}
+          onBlur={updateReference}
+        />
+      </Fade>
+
+      <Fade
+        in={loading}
+        style={{
+          transitionDelay: loading ? "800ms" : "0ms",
+        }}
+        unmountOnExit
+      >
+        <CircularProgress thickness={4} size={20} />
+      </Fade>
+    </Box>
+  );
+}

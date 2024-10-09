@@ -1,4 +1,10 @@
-import { Card, CardActions, CardContent, Typography } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Stack,
+  Typography,
+} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import PropTypes from "prop-types";
 import * as React from "react";
@@ -51,6 +57,7 @@ export default function CreateTransaction({
 }) {
   const [values, setValues] = React.useState({
     amount: 0,
+    referance: "",
     date: "",
   });
 
@@ -84,6 +91,7 @@ export default function CreateTransaction({
         cointitle: cointitle,
         amount: Number(values.amount),
         transaction_type: trnsType,
+        referance: values.referance
       }).then(() => {
         sendMessage(
           `
@@ -115,20 +123,33 @@ export default function CreateTransaction({
             balance:{" "}
             <CurrencyFormat amount={balance} prefix={"$"} seperator={true} />
           </Typography>
-          <TextField
-            id="outlined-savings"
-            label="Amount"
-            variant="outlined"
-            name="amount"
-            value={values.amount}
-            onChange={handleChange}
-            InputLabelProps={{ shrink: true }}
-            required
-            InputProps={{
-              inputComponent: NumberFormatCustom,
-            }}
-            focused
-          />
+          <Stack spacing={2} direction="column">
+            <TextField
+              id="outlined-savings"
+              label="Amount"
+              variant="outlined"
+              name="amount"
+              value={values.amount}
+              onChange={handleChange}
+              InputLabelProps={{ shrink: true }}
+              required
+              InputProps={{
+                inputComponent: NumberFormatCustom,
+              }}
+              focused
+            />
+            <TextField
+              type="text"
+              id="outlined-ref"
+              label="Transaction ref"
+              variant="outlined"
+              name="referance"
+              value={values.referance}
+              onChange={handleChange}
+              InputLabelProps={{ shrink: true }}
+              required
+            />
+          </Stack>
         </CardContent>
         <CardActions>
           <LoadingButton
