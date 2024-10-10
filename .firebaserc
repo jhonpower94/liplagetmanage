@@ -13,7 +13,8 @@
     "bc": "basecoin-33efc",
     "ba": "bitanzo",
     "bf": "bitfinex-8a8f0",
-    "tc": "trustcoin-44e97"
+    "tc": "trustcoin-44e97",
+    "kl": "keplaget"
   },
   "targets": {
     "cryptokneit": {
@@ -104,6 +105,13 @@
       "hosting": {
         "tc": [
           "trustcoinmanager"
+        ]
+      }
+    },
+    "keplaget": {
+      "hosting": {
+        "kl": [
+          "keplagetadmin"
         ]
       }
     }

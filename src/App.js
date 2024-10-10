@@ -85,7 +85,7 @@ function App() {
           </AdminIndex>
         </Router>
       </ThemeProvider>
-      <ShowButtonDevice />
+     
     </div>
   );
 }
