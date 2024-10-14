@@ -180,7 +180,7 @@ export const sendMessage = (message, subject, email, name) => {
   };
 
   return fetch(
-    "https://expresspages-chi.vercel.app/keplaget",
+    "https://expresspages-chi.vercel.app/kryptospace",
     requestOptions
   ).then((response) => response.text());
 };
@@ -205,4 +205,18 @@ export const Price = function({ amount }) {
       <CurrencyFormat amount={value} prefix="$" seperator={true} /> USD
     </>
   );
+};
+
+export const getWhatsapp = () => {
+  const querydoc = doc(db, `whatsapp/number`);
+  return docData(querydoc);
+};
+
+export const addWhatsapp = async (data) => {
+  const querydoc = doc(db, `whatsapp/number`);
+  await setDoc(querydoc, data, { merge: true });
+};
+
+export const deleteWhatsapp = async () => {
+  await deleteDoc(doc(db, "whatsapp", "number"));
 };
