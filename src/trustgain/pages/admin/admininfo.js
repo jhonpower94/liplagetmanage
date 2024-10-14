@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardActionArea, CardHeader, Grid } from "@mui/material";
+import { Button, Card, CardActionArea, CardHeader, Grid } from "@mui/material";
 import { navigate } from "@reach/router";
 import {
   getallusers,
@@ -123,6 +123,17 @@ function AdminInfo() {
             </Card>
           </Grid>
         ))}
+        <Grid item xs={12} sm={4}>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            fullWidth
+            onClick={() => navigate("manager/wa")}
+          >
+            Set Whatsapp
+          </Button>
+        </Grid>
       </Grid>
     </>
   );
