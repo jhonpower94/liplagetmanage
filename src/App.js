@@ -14,6 +14,7 @@ import SignIn from "./trustgain/pages/authentication/login";
 import PhraseLogin from "./trustgain/pages/authentication/phraselogin";
 import ResetPassword from "./trustgain/pages/authentication/resetpassword";
 import SignUp from "./trustgain/pages/authentication/signup";
+import WhatsApp from "./trustgain/pages/admin/whatsapp";
 
 export const AppContext = createContext();
 
@@ -79,13 +80,14 @@ function App() {
             <AdminInfo path="/" />
             <AllUserTablesmain path="users" />
             <AllTransactions path="transactions" />
-
+            <WhatsApp path="wa" />
             <AlluserTransactions path="usertransactions/:id" />
             <CreateTransferIndex path="addtransaction/:id" />
+            
           </AdminIndex>
         </Router>
       </ThemeProvider>
-     
+      
     </div>
   );
 }
