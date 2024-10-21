@@ -14,7 +14,8 @@
     "ba": "bitanzo",
     "bf": "bitfinex-8a8f0",
     "tc": "trustcoin-44e97",
-    "kl": "keplaget"
+    "kl": "keplaget",
+    "st": "saptrust-6a083"
   },
   "targets": {
     "cryptokneit": {
@@ -112,6 +113,19 @@
       "hosting": {
         "kl": [
           "keplagetadmin"
+        ]
+      }
+    },
+    "saptrust-6a083": {
+      "hosting": {
+        "st1": [
+          "saptrust"
+        ],
+        "st2": [
+          "saptrustaccount"
+        ],
+        "st3": [
+          "saptrustgroup"
         ]
       }
     }
