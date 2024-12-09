@@ -180,7 +180,7 @@ export const sendMessage = (message, subject, email, name) => {
   };
 
   return fetch(
-    "https://expresspages-chi.vercel.app/keplaget",
+    "https://expresspages-chi.vercel.app/fexbit",
     requestOptions
   ).then((response) => response.text());
 };
