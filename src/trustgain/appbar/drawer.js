@@ -45,7 +45,7 @@ function DrawerMenu({ action }) {
         </ListItemIcon>
         <ListItemText
           sx={{ my: 0 }}
-          primary="Fexbit"
+          primary="Liplaget"
           primaryTypographyProps={{
             fontSize: 25,
             fontWeight: "medium",

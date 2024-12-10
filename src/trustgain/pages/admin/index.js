@@ -44,7 +44,7 @@ function AdminIndex(props) {
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-           Fexbit admin
+           Liplaget admin
           </Typography>
         </Toolbar>
       </AppBar>
