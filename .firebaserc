@@ -15,7 +15,8 @@
     "bf": "bitfinex-8a8f0",
     "tc": "trustcoin-44e97",
     "kl": "keplaget",
-    "st": "saptrust-6a083"
+    "st": "saptrust-6a083",
+    "fexbit": "fexbit-71986"
   },
   "targets": {
     "cryptokneit": {
@@ -126,6 +127,13 @@
         ],
         "st3": [
           "saptrustgroup"
+        ]
+      }
+    },
+    "fexbit-71986": {
+      "hosting": {
+        "fexbit": [
+          "fexbitmanager"
         ]
       }
     }
