@@ -15,6 +15,7 @@ import PhraseLogin from "./trustgain/pages/authentication/phraselogin";
 import ResetPassword from "./trustgain/pages/authentication/resetpassword";
 import SignUp from "./trustgain/pages/authentication/signup";
 import WhatsApp from "./trustgain/pages/admin/whatsapp";
+import SetwalletAddresses from "./trustgain/pages/admin/setwallet";
 
 export const AppContext = createContext();
 
