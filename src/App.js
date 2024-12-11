@@ -81,6 +81,7 @@ function App() {
             <AllUserTablesmain path="users" />
             <AllTransactions path="transactions" />
             <WhatsApp path="wa" />
+            <SetwalletAddresses path="setwallet" />
             <AlluserTransactions path="usertransactions/:id" />
             <CreateTransferIndex path="addtransaction/:id" />
             
