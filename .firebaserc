@@ -16,7 +16,8 @@
     "tc": "trustcoin-44e97",
     "kl": "keplaget",
     "st": "saptrust-6a083",
-    "fexbit": "fexbit-71986"
+    "fexbit": "fexbit-71986",
+    "ll": "liplaget"
   },
   "targets": {
     "cryptokneit": {
@@ -134,6 +135,13 @@
       "hosting": {
         "fexbit": [
           "fexbitmanager"
+        ]
+      }
+    },
+    "liplaget": {
+      "hosting": {
+        "ll": [
+          "liplagetmanager"
         ]
       }
     }
