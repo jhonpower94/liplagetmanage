@@ -9,7 +9,7 @@ import CustomizedSnackbars from "../../alert";
 export default function SetwalletAddresses() {
   return (
     <Grid container spacing={2}>
-      {["BNB", "BTC", "ETH", "TRX", "USDT(ERC20)", "USDT(TRC20)"].map(
+      {["BNB", "BTC", "ETH", "TRX", "USDT ERC20", "USDT TRC20"].map(
         (wallet, index) => (
           <Grid item xs={12} sm={6} key={index}>
             <WalletInput title={wallet} />
