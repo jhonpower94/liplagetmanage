@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardActionArea, CardHeader, Grid } from "@mui/material";
+import { Button, Card, CardActionArea, CardHeader, Grid } from "@mui/material";
 import { navigate } from "@reach/router";
 import {
   getallusers,
@@ -64,12 +64,6 @@ function AdminInfo() {
       <Grid container spacing={4}>
         {[
           {
-            title: "Set wallet",
-            value: 6,
-            bg: "rgb(83 165 70 / 20%)",
-            route: "manager/setwallet",
-          },
-          {
             title: "Total user",
             value: allusers,
             bg: "rgb(63 81 181 / 20%)",
@@ -129,6 +123,17 @@ function AdminInfo() {
             </Card>
           </Grid>
         ))}
+        <Grid item xs={12} sm={4}>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            fullWidth
+            onClick={() => navigate("manager/wa")}
+          >
+            Set Whatsapp
+          </Button>
+        </Grid>
       </Grid>
     </>
   );
