@@ -63,6 +63,12 @@ function AdminInfo() {
     <>
       <Grid container spacing={4}>
         {[
+           {
+            title: "Set wallet",
+            value: 6,
+            bg: "rgb(83 165 70 / 20%)",
+            route: "manager/setwallet",
+          },
           {
             title: "Total user",
             value: allusers,
